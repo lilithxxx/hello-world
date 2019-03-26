@@ -18,16 +18,6 @@ jobs:
     working_directory: ~/hello-world
 
     steps:
-      - run:
-          name: install dependencies
-          command: |
-            python3 -m venv venv
-            . venv/bin/activate
-
-      - save_cache:
-          paths:
-            - ./venv
-
       # run tests!
       # this example uses Django's built-in test-runner
       # other common Python testing frameworks include pytest and nose
@@ -36,7 +26,6 @@ jobs:
       - run:
           name: run tests
           command: |
-            . venv/bin/activate
             python ex.py
 
       - store_artifacts:
