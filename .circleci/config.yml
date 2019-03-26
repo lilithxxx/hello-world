@@ -28,7 +28,7 @@ jobs:
       - run:
           name: run tests
           command: |
-            python ex.py
+            coverage run ex.py
            
       - run:
           name: Generate backend coverage report
