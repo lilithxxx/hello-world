@@ -29,6 +29,13 @@ jobs:
           name: run tests
           command: |
             python ex.py
+           
+      - run:
+          name: Generate backend coverage report
+          command: |
+            sudo pip install codecov
+            codecov
+          when: on_success
 
       - store_artifacts:
           path: test-reports
