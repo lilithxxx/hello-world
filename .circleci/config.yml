@@ -28,6 +28,7 @@ jobs:
       - run:
           name: run tests
           command: |
+            sudo pip install coverage
             coverage run ex.py
            
       - run:
