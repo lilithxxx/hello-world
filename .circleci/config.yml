@@ -26,6 +26,10 @@ jobs:
       # https://pytest.org
       # https://nose.readthedocs.io
       - run:
+          name: run file
+          command: |
+            python ex.py
+      - run:
           name: run tests
           command: |
             sudo pip install coverage
