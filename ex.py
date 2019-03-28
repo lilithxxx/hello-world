@@ -3,3 +3,4 @@ def hello():
 
 def test_hello():
     assert hello() == "world"
+    sys.exit(1)
