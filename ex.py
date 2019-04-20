@@ -3,3 +3,5 @@ def hello():
 
 def test_hello():
     assert hello() == "world"
+
+assert 2 == 3
