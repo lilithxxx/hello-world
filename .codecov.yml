@@ -8,3 +8,18 @@ comment:
   require_base: no        # [yes :: must have a base report to post]
   require_head: yes       # [yes :: must have a head report to post]
   branches: null          # branch names that can post commen
+
+coverage:
+  status:
+    oppia:
+      default:
+        # basic
+        target: auto
+        threshold: null
+        base: pr
+        # advanced
+        branches: null
+        if_no_uploads: error
+        if_not_found: success
+        if_ci_failed: error
+        only_pulls: false
